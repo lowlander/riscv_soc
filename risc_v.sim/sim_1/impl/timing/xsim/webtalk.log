@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Dec 30 12:02:47 2020
+# Process ID: 22188
+# Current directory: D:/vivado_projects/risc_v/risc_v.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source D:/vivado_projects/risc_v/risc_v.sim/sim_1/impl/timing/xsim/xsim.dir/top_level_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/vivado_projects/risc_v/risc_v.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: D:/vivado_projects/risc_v/risc_v.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/vivado_projects/risc_v/risc_v.sim/sim_1/impl/timing/xsim/xsim.dir/top_level_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Dec 30 12:02:47 2020...

@@ -1,0 +1,122 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Jan  3 12:05:48 2021
+| Host         : THINK running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
+| Design       : top_level
+| Device       : xc7a200t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    44 |
+|    Minimum number of control sets                        |    44 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    44 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    36 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             340 |          119 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             172 |           63 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1032 |          413 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------+----------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal |                             Enable Signal                            |                         Set/Reset Signal                         | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------+----------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+--------------+
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/if2_stage_inst/if2_to_id_buf_reg[instr][2]_0  |                2 |              4 |         2.00 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/if2_stage_inst/if2_to_id_buf_reg[instr][3]_0  |                1 |              5 |         5.00 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/if2_stage_inst/if2_to_id_buf_reg[instr][4]_2  |                4 |              6 |         1.50 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/if2_stage_inst/if2_to_id_buf_reg[instr][12]_0 |                1 |              6 |         6.00 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/ex_stage_inst/E[0]                                | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |                2 |              8 |         4.00 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/id_stage_inst/id_to_ex_buf_reg[nop]_0[0]      |                5 |             10 |         2.00 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/if2_stage_inst/if2_to_id_buf_reg[instr][12]_1 |                5 |             11 |         2.20 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/if2_stage_inst/if2_to_id_buf_reg[nop]_0[0]    |                6 |             13 |         2.17 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf[mem][31]_i_1_n_0 |                8 |             24 |         3.00 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][2]_2[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               20 |             32 |         1.60 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/id_stage_inst/SR[0]                           |                9 |             32 |         3.56 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/E[0]                               | soc_inst/hart_inst/me2_stage_inst/cpu_resetn[0]                  |               13 |             32 |         2.46 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_0[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               10 |             32 |         3.20 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_13[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               15 |             32 |         2.13 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][0]_1[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               11 |             32 |         2.91 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_14[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |                9 |             32 |         3.56 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_10[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               10 |             32 |         3.20 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_15[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               12 |             32 |         2.67 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_17[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               13 |             32 |         2.46 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_11[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |                8 |             32 |         4.00 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_12[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               14 |             32 |         2.29 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][3]_2[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               10 |             32 |         3.20 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][0]_2[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               11 |             32 |         2.91 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][3]_1[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               12 |             32 |         2.67 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][3]_3[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |                9 |             32 |         3.56 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][0]_0[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               12 |             32 |         2.67 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_16[0] | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               20 |             32 |         1.60 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_2[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               10 |             32 |         3.20 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_4[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               14 |             32 |         2.29 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_5[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               20 |             32 |         1.60 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][1]_2[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               10 |             32 |         3.20 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_6[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               18 |             32 |         1.78 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_7[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               16 |             32 |         2.00 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_8[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               10 |             32 |         3.20 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_9[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               15 |             32 |         2.13 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_1[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               12 |             32 |         2.67 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][4]_3[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               16 |             32 |         2.00 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][1]_1[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |                7 |             32 |         4.57 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][2]_0[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               17 |             32 |         1.88 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][2]_1[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |                9 |             32 |         3.56 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][2]_3[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               16 |             32 |         2.00 |
+|  cpu_clk_BUFG | soc_inst/hart_inst/me2_stage_inst/me2_to_wb_buf_reg[rd_sel][3]_0[0]  | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               12 |             32 |         2.67 |
+|  cpu_clk_BUFG |                                                                      | soc_inst/hart_inst/id_stage_inst/register_file_inst/SR[0]        |               22 |             61 |         2.77 |
+|  cpu_clk_BUFG |                                                                      |                                                                  |              119 |            403 |         3.39 |
++---------------+----------------------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+--------------+
+
+

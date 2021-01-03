@@ -1,0 +1,49 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Programs/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 4f1cbb9512324c69bf45cc8c1931018f --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_level_tb_behav xil_defaultlib.top_level_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package unimacro.vcomponents
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.riscv
+Compiling package ieee.std_logic_unsigned
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=8.0,...]
+Compiling architecture behavioral of entity xil_defaultlib.ibus [ibus_default]
+Compiling architecture behavioral of entity xil_defaultlib.dbus [dbus_default]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(init_00="111...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(init_00="1111111000000...]
+Compiling architecture ramb36_v of entity unisim.RAMB36 [\RAMB36(init_00="111111100000011...]
+Compiling architecture bram_v of entity unimacro.BRAM_TDP_MACRO [\BRAM_TDP_MACRO(bram_size="36Kb"...]
+Compiling architecture behavioral of entity xil_defaultlib.ram [ram_default]
+Compiling architecture behavioral of entity xil_defaultlib.gpio [gpio_default]
+Compiling architecture behavioral of entity xil_defaultlib.uart [uart_default]
+Compiling architecture behavioral of entity xil_defaultlib.if1_stage [if1_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.if2_stage [if2_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.register_file [register_file_default]
+Compiling architecture behavioral of entity xil_defaultlib.id_stage [id_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.forward_unit [forward_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.alu [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.branch_detect [branch_detect_default]
+Compiling architecture behavioral of entity xil_defaultlib.ex_stage [ex_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.me1_stage [me1_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.me2_stage [me2_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.wb_stage [wb_stage_default]
+Compiling architecture behavioral of entity xil_defaultlib.hart [hart_default]
+Compiling architecture behavioral of entity xil_defaultlib.soc [soc_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_level [top_level_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_level_tb
+Built simulation snapshot top_level_tb_behav
